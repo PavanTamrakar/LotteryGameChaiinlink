@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# LotteryGame(ChainLink) project 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Lottery Game Winner project reffered from LearnWeb3Dao tutorial
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Project to understand ChainLink Oracle and understand how randomness works in computer world. 
