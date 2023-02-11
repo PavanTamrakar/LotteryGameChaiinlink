@@ -32,4 +32,18 @@ contract LotteryGameChaiinlink is VRFConsumerBase, Ownable {
         gameStarted = false;
     }
 
+    function startGame(uint8 _maxPlayer, uint256 _entryFee) public onlyOwner{
+        require(!gameStarted, "Game already Started");
+        delete players;
+
+        maxPlayer = _maxPlayer;
+
+        gameStarted = true;
+
+        entryFee = _entryFee;
+
+        gameId += 1;
+
+        emit GameStarted(maxPlayer, entryFee, gameId);
+    }
 }
