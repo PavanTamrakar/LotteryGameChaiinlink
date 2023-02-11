@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -18,6 +19,17 @@ contract LotteryGameChaiinlink is VRFConsumerBase, Ownable {
 
     uint256 public gameId;
 
-    
+    event GameStarted (uint8 maxPlayer, uint256 entryFee, uint256 gameId);
+
+    event PlayerJoined (uint256 gameId, address players);
+
+    event GameEnded (uint256 gameID, address winner, bytes32 requestId);
+
+    constructor (address vrfCoordinator, address linkToken, bytes32 vrfKeyHash, uint256 vrfFee)
+    VRFConsumerBase(vrfCoordinator, linkToken) {
+        keyHash = vrfKeyHash;
+        fee = vrfFee;
+        gameStarted = false;
+    }
 
 }
