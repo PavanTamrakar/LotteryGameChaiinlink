@@ -46,4 +46,8 @@ contract LotteryGameChaiinlink is VRFConsumerBase, Ownable {
 
         emit GameStarted(maxPlayer, entryFee, gameId);
     }
+
+    function joinGame() public payable {
+        
+    }
 }
